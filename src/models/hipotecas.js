@@ -1,5 +1,7 @@
 module.exports = (sequelize, DataType) => {
 
+    // Modelo Hipoteca con los campos (cliente, cuota e importeTotal)
+    // Se indican las restricciones de cara a la construcción de la tabla en la bbdd
     const Hipotecas = sequelize.define('Hipotecas', {
         id: {
             type: DataType.INTEGER,

@@ -8,6 +8,7 @@ module.exports = app => {
 
     const config = app.libs.config;
 
+    // Si no existe la base de datos, se construye mediante Sequelize con los modelos especificados en el directorio 'models'
     if (!db) {
         
         const sequelize = new Sequelize(

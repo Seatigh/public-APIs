@@ -2,6 +2,7 @@ module.exports = app => {
 
     const Clientes = app.db.models.Clientes;
 
+    // Endpoint para consultar todos los clientes (get) y crear un cliente (post)
     app.route('/clientes')
     .get((req, res) => {
         Clientes.findAll({})
@@ -18,6 +19,7 @@ module.exports = app => {
         });
     });
 
+    // Endpoint para consultar un cliente por su dni (get), modificarlo (put) o borrarlo (delete)
     app.route('/clientes/:dni')
     .get((req, res) => {
         Clientes.findByPk(req.params.dni)

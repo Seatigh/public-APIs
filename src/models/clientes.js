@@ -1,5 +1,7 @@
 module.exports = (sequelize, DataType) => {
 
+    // Modelo Cliente con campos (dni, nombre, email y capitalSolicitado)
+    // Se indican las restricciones de cara a la construcción de la tabla en la bbdd
     const Clientes = sequelize.define('Clientes', {
         dni: {
             type: DataType.STRING,
